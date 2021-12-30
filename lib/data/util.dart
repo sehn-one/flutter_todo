@@ -1,16 +1,16 @@
 class Util {
   static int getFormatTime(DateTime date) {
     // date.month 7월 => 07(x) 7(o)
-    // 이것을 맞추기 위해 makeTwoDigit을 사용
+    // 이것을 맞추기 위해 makeTwoDigit 을 사용
     return int.parse("${date.year}${makeTwoDigit(date.month)}${date.day}");
   }
 
-  static DateTime numToDateTime(int date){
+  static DateTime numToDateTime(int date) {
     String _d = date.toString();
-    int year = int.parse(_d.substring(0,4);
-    int month = int.parse(_d.substring(4,2);
-    int day = int.parse(_d.substring(6,2);
-    return DateTime(year,month,day)
+    int year = int.parse(_d.substring(0, 4));
+    int month = int.parse(_d.substring(4, 2));
+    int day = int.parse(_d.substring(6, 2));
+    return DateTime(year, month, day);
   }
 
   static String makeTwoDigit(int num) {
